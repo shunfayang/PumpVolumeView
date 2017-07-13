@@ -22,6 +22,8 @@
 6. 重写 onTouchEvent()方法处理手势；
 7. 开启一个线程不断递减音量；
 
+![](https://github.com/shunfayang/PumpVolumeView/blob/master/gif/%E7%BB%98%E5%88%B6%E6%AD%A5%E9%AA%A4.jpg)
+
 几乎没什么可以继续写的，有兴趣的小伙伴就看源码吧。
 
 
