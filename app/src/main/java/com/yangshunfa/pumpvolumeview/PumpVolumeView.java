@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
@@ -123,7 +124,9 @@ public class PumpVolumeView extends View {
 
         mPaint.setColor(Color.parseColor(BRIGHT_GRAY));
         // 横向手柄
-        canvas.drawRect(handleLeft, handleTop, handleRight, handleBottom, mPaint);
+        RectF rect = new RectF(handleLeft, handleTop, handleRight, handleBottom);
+        canvas.drawRoundRect(rect,5,5,mPaint);
+//        canvas.drawRoundRect(handleLeft, handleTop, handleRight, handleBottom,5, 5 , mPaint);
         // 竖直打气杆
         canvas.drawRect(centerWidth - 5, handleTop, centerWidth +5, this.top, mPaint);
 
